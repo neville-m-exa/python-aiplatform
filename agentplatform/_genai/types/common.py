@@ -21378,6 +21378,10 @@ class DeletePromptConfig(_common.BaseModel):
         default=90,
         description="""Timeout for the delete prompt operation in seconds. Defaults to 90.""",
     )
+    max_wait_time: Optional[int] = Field(
+        default=60,
+        description="""Maximum interval between polling requests in seconds. Defaults to 60.""",
+    )
 
 
 class DeletePromptConfigDict(TypedDict, total=False):
@@ -21388,6 +21392,9 @@ class DeletePromptConfigDict(TypedDict, total=False):
 
     timeout: Optional[int]
     """Timeout for the delete prompt operation in seconds. Defaults to 90."""
+
+    max_wait_time: Optional[int]
+    """Maximum interval between polling requests in seconds. Defaults to 60."""
 
 
 DeletePromptConfigOrDict = Union[DeletePromptConfig, DeletePromptConfigDict]
@@ -21536,6 +21543,14 @@ class RestoreVersionConfig(_common.BaseModel):
     http_options: Optional[genai_types.HttpOptions] = Field(
         default=None, description="""Used to override HTTP request options."""
     )
+    timeout: Optional[int] = Field(
+        default=90,
+        description="""Timeout for the restore prompt version operation in seconds. Defaults to 90.""",
+    )
+    max_wait_time: Optional[int] = Field(
+        default=60,
+        description="""Maximum interval between polling requests in seconds. Defaults to 60.""",
+    )
 
 
 class RestoreVersionConfigDict(TypedDict, total=False):
@@ -21543,6 +21558,12 @@ class RestoreVersionConfigDict(TypedDict, total=False):
 
     http_options: Optional[genai_types.HttpOptions]
     """Used to override HTTP request options."""
+
+    timeout: Optional[int]
+    """Timeout for the restore prompt version operation in seconds. Defaults to 90."""
+
+    max_wait_time: Optional[int]
+    """Maximum interval between polling requests in seconds. Defaults to 60."""
 
 
 RestoreVersionConfigOrDict = Union[RestoreVersionConfig, RestoreVersionConfigDict]
@@ -21641,6 +21662,10 @@ class UpdatePromptConfig(_common.BaseModel):
         default=None,
         description="""Customer-managed encryption key spec for a prompt dataset. If set, this prompt dataset and all sub-resources of this prompt dataset will be secured by this key.""",
     )
+    max_wait_time: Optional[int] = Field(
+        default=60,
+        description="""The maximum interval between polling requests in seconds. If not set, the default interval is 60 seconds.""",
+    )
 
 
 class UpdatePromptConfigDict(TypedDict, total=False):
@@ -21660,6 +21685,9 @@ class UpdatePromptConfigDict(TypedDict, total=False):
 
     encryption_spec: Optional[genai_types.EncryptionSpec]
     """Customer-managed encryption key spec for a prompt dataset. If set, this prompt dataset and all sub-resources of this prompt dataset will be secured by this key."""
+
+    max_wait_time: Optional[int]
+    """The maximum interval between polling requests in seconds. If not set, the default interval is 60 seconds."""
 
 
 UpdatePromptConfigOrDict = Union[UpdatePromptConfig, UpdatePromptConfigDict]
@@ -26782,6 +26810,10 @@ class CreatePromptConfig(_common.BaseModel):
         default=None,
         description="""The display name for the prompt version. If not set, a default name with a timestamp will be used.""",
     )
+    max_wait_time: Optional[int] = Field(
+        default=60,
+        description="""The maximum interval between requests in seconds. If not set, the default interval is 60 seconds.""",
+    )
 
 
 class CreatePromptConfigDict(TypedDict, total=False):
@@ -26801,6 +26833,9 @@ class CreatePromptConfigDict(TypedDict, total=False):
 
     version_display_name: Optional[str]
     """The display name for the prompt version. If not set, a default name with a timestamp will be used."""
+
+    max_wait_time: Optional[int]
+    """The maximum interval between requests in seconds. If not set, the default interval is 60 seconds."""
 
 
 CreatePromptConfigOrDict = Union[CreatePromptConfig, CreatePromptConfigDict]
@@ -26828,6 +26863,10 @@ class CreatePromptVersionConfig(_common.BaseModel):
         default=None,
         description="""Customer-managed encryption key spec for a prompt dataset. If set, this prompt dataset and all sub-resources of this prompt dataset will be secured by this key.""",
     )
+    max_wait_time: Optional[int] = Field(
+        default=60,
+        description="""The maximum interval between requests in seconds. If not set, the default interval is 60 seconds.""",
+    )
 
 
 class CreatePromptVersionConfigDict(TypedDict, total=False):
@@ -26847,6 +26886,9 @@ class CreatePromptVersionConfigDict(TypedDict, total=False):
 
     encryption_spec: Optional[genai_types.EncryptionSpec]
     """Customer-managed encryption key spec for a prompt dataset. If set, this prompt dataset and all sub-resources of this prompt dataset will be secured by this key."""
+
+    max_wait_time: Optional[int]
+    """The maximum interval between requests in seconds. If not set, the default interval is 60 seconds."""
 
 
 CreatePromptVersionConfigOrDict = Union[
