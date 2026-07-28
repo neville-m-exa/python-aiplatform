@@ -3,12 +3,14 @@ Google Gemini Enterprise Agent Platform SDK for Python
 
 |GA| |pypi| |versions| |unit-tests| |system-tests| |sample-tests|
 
-> **Note:** The Gemini Enterprise Agent Platform was formerly known as
-> Vertex AI.
-
-> **Note:** The **agent_engines** module will be rebranded as **runtimes** in
-> an upcoming major release (not before 7/31/2026). See [Agent Runtime](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale#agent-runtime) for details.
-
+> [!NOTE]
+> The Gemini Enterprise Agent Platform was formerly known as Vertex AI.
+>
+> [!WARNING]
+> **Upcoming Rebranding:**
+> The `agent_engines` module will be rebranded as `runtimes` in an upcoming major release (not before 7/31/2026). See [Agent Runtime](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale#agent-runtime) for details.
+>
+> To avoid breaking changes, pin the SDK version to `< 2.0.0`.
 
 `Gemini Enterprise Agent Platform`_: Gemini Enterprise Agent Platform is Google Cloud's comprehensive platform for developers to build, scale, govern and optimize agents.
 
