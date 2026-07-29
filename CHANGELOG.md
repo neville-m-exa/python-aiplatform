@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.164.0](https://github.com/googleapis/python-aiplatform/compare/v1.163.0...v1.164.0) (2026-07-29)
+
+
+### Features
+
+* Forward per-request labels to RunConfig in streaming_agent_run_with_events ([f8eb68c](https://github.com/googleapis/python-aiplatform/commit/f8eb68c1748aff52d3506838d9d8c1ec537e56f5))
+* GenAI Client(evals) - async auto-create EvaluationExperiment parity ([e689f0e](https://github.com/googleapis/python-aiplatform/commit/e689f0ec00ad9b4a79b3982e8bb23c47bf0cb197))
+* GenAI Client(evals) - auto-create EvaluationExperiment in create_evaluation_run ([eb75e14](https://github.com/googleapis/python-aiplatform/commit/eb75e149302b9807330068b062d38b8dad9f9ef8))
+
+
+### Bug Fixes
+
+* Enable automatic session creation in ADK template. ([f343270](https://github.com/googleapis/python-aiplatform/commit/f3432707f4e729910dd6781cce571d19b8956d49))
+
 ## [1.163.0](https://github.com/googleapis/python-aiplatform/compare/v1.162.0...v1.163.0) (2026-07-28)
 
 
